@@ -24,6 +24,4 @@ public class Usuario {
     @OneToOne
     private Rol rol;
 
-
     }
-}
