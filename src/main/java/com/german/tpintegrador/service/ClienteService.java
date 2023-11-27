@@ -4,6 +4,9 @@ import com.german.tpintegrador.entity.Cliente;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface ClienteService {
+public interface
+
+
+ClienteService {
     Cliente saveCliente(Cliente c);
 }
