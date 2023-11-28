@@ -20,7 +20,7 @@ public class Usuario {
     private String nombre;
     @Column
     private String password;
-    @Column
+    @PrimaryKeyJoinColumn
     @OneToOne
     private Rol rol;
 

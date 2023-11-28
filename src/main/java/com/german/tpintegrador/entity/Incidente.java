@@ -29,14 +29,16 @@ public class Incidente {
     private boolean resuelto;
     @Column
     private String consideracion;
-    @Column
+    @PrimaryKeyJoinColumn
     @OneToOne
     private Cliente cliente;
-    @Column
+    @PrimaryKeyJoinColumn
     @OneToOne
     private Tecnico tecnico;
+    @PrimaryKeyJoinColumn
     @OneToOne
     private TipoProblema tipo;
+    @PrimaryKeyJoinColumn
     @OneToOne
     private Servicio servicio;
 }
