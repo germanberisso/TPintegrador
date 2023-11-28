@@ -29,6 +29,11 @@ public class ServicioServiceImp implements ServicioService{
 
     @Override
     public void deleteServicioById(Long id) {
+        servicioRepo.deleteById(id);
 
     }
+    public Servicio findServicioById(Long id){
+        return servicioRepo.getReferenceById(id);
+    }
+
 }

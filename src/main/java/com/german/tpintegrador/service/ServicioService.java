@@ -18,4 +18,6 @@ public interface ServicioService {
 
     // Delete
     void deleteServicioById(Long id);
+
+    Servicio findServicioById(Long id);
 }
