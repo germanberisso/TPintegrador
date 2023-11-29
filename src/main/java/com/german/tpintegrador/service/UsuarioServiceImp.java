@@ -2,11 +2,15 @@ package com.german.tpintegrador.service;
 
 import com.german.tpintegrador.entity.Usuario;
 import com.german.tpintegrador.repository.UsuarioRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UsuarioServiceImp implements UsuarioService{
+    @Autowired
     private UsuarioRepo usuarioRepo;
+    @Override
     public Usuario saveUsuario(Usuario u) {
         return usuarioRepo.save(u);
     }

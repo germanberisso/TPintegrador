@@ -3,12 +3,15 @@ package com.german.tpintegrador.service;
 import com.german.tpintegrador.entity.Rol;
 import com.german.tpintegrador.entity.Servicio;
 import com.german.tpintegrador.repository.ServicioRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ServicioServiceImp implements ServicioService{
+    @Autowired
     private ServicioRepo servicioRepo;
-
+    @Override
     public Servicio saveServicio(Servicio s) {
         return servicioRepo.save(s);
     }
@@ -32,6 +35,7 @@ public class ServicioServiceImp implements ServicioService{
         servicioRepo.deleteById(id);
 
     }
+    @Override
     public Servicio findServicioById(Long id){
         return servicioRepo.getReferenceById(id);
     }

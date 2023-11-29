@@ -11,14 +11,15 @@ import java.util.List;
 public class EspecialidadServiceImp implements EspecialidadService{
     @Autowired
     private EspecialidadRepo especialidadRepo;
+    @Override
     public Especialidad saveEspecialidad(Especialidad e) {
         return especialidadRepo.save(e);
     }
-
+    @Override
     public List<Especialidad> getAllEspecialidad() {
         return especialidadRepo.findAll();
     }
-
+    @Override
     public Especialidad updateEspecialidad(Especialidad especialidad, Long id) {
         Especialidad especialidadDB = especialidadRepo.getReferenceById(id);
         if(!especialidad.getNombre().trim().isEmpty())

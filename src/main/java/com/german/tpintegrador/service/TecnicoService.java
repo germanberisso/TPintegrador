@@ -17,4 +17,7 @@ public interface TecnicoService {
 
     // Delete
     void deleteTecnicoById(Long id);
+
+    Tecnico fetchTecnicoMasIncidentes();
+
 }

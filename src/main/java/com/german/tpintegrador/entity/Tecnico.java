@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.Set;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -24,8 +26,8 @@ public class Tecnico {
     @Column(nullable = false, length = 20)
     private String telefono;
     @OneToMany
-    private ArrayList<Especialidad> especialidades;
+    private Set<Especialidad> especialidades;
     @OneToMany
-    private ArrayList<Incidente> incidentes;
+    private Set<Incidente> incidentes;
 
 }

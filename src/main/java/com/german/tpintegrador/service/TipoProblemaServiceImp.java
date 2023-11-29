@@ -3,10 +3,13 @@ package com.german.tpintegrador.service;
 import com.german.tpintegrador.entity.Servicio;
 import com.german.tpintegrador.entity.TipoProblema;
 import com.german.tpintegrador.repository.TipoProblemaRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class TipoProblemaServiceImp implements TipoProblemaService{
+    @Autowired
     private TipoProblemaRepo tipoProblemaRepo;
     @Override
     public TipoProblema saveTipoProblema(TipoProblema t) {

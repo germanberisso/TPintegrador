@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.Set;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class Cliente {
     @Column(nullable = false, length = 255)
     private String mail;
     @OneToMany
-    private ArrayList<Servicio> servicios;
+    private Set<Servicio> servicios;
 
 
 }

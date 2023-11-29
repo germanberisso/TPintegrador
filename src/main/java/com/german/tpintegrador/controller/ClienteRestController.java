@@ -65,7 +65,7 @@ public class ClienteRestController {
 
 
                 //Servicios
-                ArrayList<Servicio> s = new ArrayList<Servicio>();
+                Set<Servicio> s = new HashSet<Servicio>();
                 if(body.get("servicio") != null) {
                         for (Integer servicioId : (ArrayList<Integer>) body.get("servicio")) {
                                 Servicio servicio = servicioService.findServicioById(Long.valueOf(servicioId));

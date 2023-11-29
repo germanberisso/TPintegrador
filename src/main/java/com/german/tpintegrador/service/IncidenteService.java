@@ -17,4 +17,5 @@ public interface IncidenteService {
 
     // Delete
     void deleteIncidenteById(Long id);
+
 }

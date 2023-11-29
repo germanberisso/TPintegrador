@@ -11,14 +11,15 @@ import java.util.List;
 public class ClienteServiceImp implements ClienteService {
     @Autowired
     private ClienteRepo clienteRepo;
+    @Override
     public Cliente saveCliente(Cliente c) {
         return clienteRepo.save(c);
     }
-
+    @Override
     public List<Cliente> getAllClientes() {
         return clienteRepo.findAll();
     }
-
+    @Override
     public Cliente updateCliente(Cliente cliente, Long id) {
         Cliente clienteDB = clienteRepo.getReferenceById(id);
         if(!cliente.getRazonSocial().trim().isEmpty())
