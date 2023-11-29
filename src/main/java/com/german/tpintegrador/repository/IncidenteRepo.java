@@ -15,7 +15,11 @@ public interface IncidenteRepo extends JpaRepository<Incidente,Long> {
 
     List<Incidente> findByResueltoTrueAndServicio_Nombre(String nombre);
 
-    Incidente findByIdAndResueltoTrueAndServicio_Nombre(Long id, String servicio_nombre);
+    //Incidente findByIdAndFechaHastaAfterAndResuelto(Long id, Date fecha);
 
-    List<Incidente> findByTecnico_IdAndResueltoTrueAndServicio_Nombre(Long id, String servicio_nombre);
+    List<Incidente> findByTecnico_IdAndResuelto(int id, boolean b);
+
+    List<Incidente> findByTecnico_IdAndResueltoIsTrue(int id);
+
+    //List<Incidente> findByTecnico_IdAndServicio_NombreAndResueltoIsTrue(Long id, String servicio_nombre);
 }

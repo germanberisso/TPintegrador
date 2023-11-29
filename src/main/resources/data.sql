@@ -15,9 +15,14 @@ INSERT INTO tecnico (id,telefono,mail,nombre) VALUES (104,'01145678943','martina
 INSERT INTO tecnico_especialidades (especialidades_id,tecnico_id) VALUES (11,101);
 INSERT INTO tecnico_especialidades (especialidades_id,tecnico_id) VALUES (12,104);
 
+
+INSERT INTO servicio (nombre) VALUES ('windows');
+INSERT INTO servicio (nombre) VALUES ('SAP');
+
 INSERT INTO incidente (resuelto,fecha_Desde,fecha_estimada,fecha_hasta,id,alias,consideracion) VALUES (false,STR_TO_DATE('18/02/2019 11:15:45','%d/%m/%Y %H:%i:%s'),STR_TO_DATE('20/02/2019 11:15:45','%d/%m/%Y %H:%i:%s'),STR_TO_DATE('22/02/2019 11:15:45','%d/%m/%Y %H:%i:%s'),1,'windows','windows');
 INSERT INTO incidente (resuelto,fecha_Desde,fecha_estimada,fecha_hasta,id,alias,consideracion) VALUES (true,STR_TO_DATE('18/02/2022 11:15:45','%d/%m/%Y %H:%i:%s'),STR_TO_DATE('20/02/2022 11:15:45','%d/%m/%Y %H:%i:%s'),STR_TO_DATE('22/02/2022 11:15:45','%d/%m/%Y %H:%i:%s'),2,'sap','SAP');
 INSERT INTO incidente (resuelto,fecha_Desde,fecha_estimada,fecha_hasta,id,alias,consideracion) VALUES (false,STR_TO_DATE('18/02/2019 11:15:45','%d/%m/%Y %H:%i:%s'),STR_TO_DATE('19/02/2019 11:15:45','%d/%m/%Y %H:%i:%s'),STR_TO_DATE('18/02/2019 16:15:45','%d/%m/%Y %H:%i:%s'),3,'windows','windows');
+
 
 INSERT INTO tecnico_incidentes (tecnico_id,incidentes_id) VALUES (101,1);
 INSERT INTO tecnico_incidentes (tecnico_id,incidentes_id) VALUES (104,2);
