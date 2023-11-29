@@ -19,5 +19,9 @@ public interface TecnicoService {
     void deleteTecnicoById(Long id);
 
     Tecnico fetchTecnicoMasIncidentes();
-
+    Tecnico fetchTecnicoMasIncidentesResueltos();
+    int cantIncidentesResueltosTecnico(Tecnico tecnico);
+    int cantIncidentesResueltosUltimosNdias(Tecnico tecnico, int ndias);
+    Tecnico tecnicoMasIncidentesResueltosNdias(int ndias);
+    Tecnico tecnicoMasIncidentesResueltosEspecialidad(String especialidad);
 }

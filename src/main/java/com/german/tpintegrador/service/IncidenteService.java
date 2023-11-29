@@ -1,6 +1,7 @@
 package com.german.tpintegrador.service;
 
 import com.german.tpintegrador.entity.Incidente;
+import com.german.tpintegrador.entity.Tecnico;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,5 +18,7 @@ public interface IncidenteService {
 
     // Delete
     void deleteIncidenteById(Long id);
+
+    //Tecnico findTecnicoMasIncidentesResueltosByEsp(String especialidad);
 
 }

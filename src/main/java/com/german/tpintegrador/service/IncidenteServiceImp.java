@@ -1,6 +1,7 @@
 package com.german.tpintegrador.service;
 
 import com.german.tpintegrador.entity.Incidente;
+import com.german.tpintegrador.entity.Tecnico;
 import com.german.tpintegrador.repository.IncidenteRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,5 +47,8 @@ public class IncidenteServiceImp implements IncidenteService{
     public void deleteIncidenteById(Long id) {
 
     }
+    //public Tecnico findTecnicoMasIncidentesResueltosByEsp(String especialidad){
+    //     List<Incidente> list =  incidenteRepo.findByResueltoTrueAndServicio_Nombre(especialidad);
+    //}
 
 }
