@@ -59,33 +59,27 @@ public class TecnicoServiceImp implements TecnicoService{
         return (int) tecnico.getIncidentes().stream().filter(incidente->incidente.isResuelto()).count();
     };
 
-    public Tecnico tecnicoMasIncidentesResueltos(){
+    public Tecnico tecnicoMasIncidentesResueltos(int ndias){
         return tecnicoRepo.findAll().stream()
-                //.max(Comparator.comparingInt(tecnico->cantIncidentesResueltosUltimosNdias(tecnico, ndias)))
-                .max(Comparator.comparingInt(tecnico->incidenteRepo.findByTecnico_IdAndResuelto(tecnico.getId(),true).size()))
+                .max(Comparator.comparingInt(tecnico->cantIncidentesResueltosUltimosNdias(tecnico, ndias)))
+                //.max(Comparator.comparingInt(tecnico->incidenteRepo.findByTecnico_IdAndResuelto(tecnico.getId()).size()))
                 .orElse(null);
     };
-    /*@Override
+    @Override
     public int cantIncidentesResueltosUltimosNdias(Tecnico tecnico, int ndias){
         Date hoy = new Date();
         //resto ndias a la fecha actual
         //para restar ndias lo tengo que pasar a milisegundos
-        long fechaLimite= hoy.getTime() - (ndias*24*60*60*1000L);
+        long fechaLimite= hoy.getDate() - (ndias*24*60*60*1000L);
         return (int) tecnico.getIncidentes().stream()
-                .filter((incidente -> incidenteRepo.findByIdAndFechaHastaAfter(incidente.getId(),new Date(fechaLimite)).isResuelto()))
-                //.filter(incidente->incidente.isResuelto()&&incidente.getFechaHasta().getTime()>=fechaLimite)
+                //.filter((incidente -> incidenteRepo.findByIdAndFechaHastaAfter(incidente.getId(),new Date(fechaLimite)).isResuelto()))
+                .filter(incidente->incidente.getFechaHasta().getTime()>=fechaLimite)
                 //.filter(incidente -> incidente.getFechaHasta().getTime()>=fechaLimite)
                 .count();
-    };*/
+    };
     @Override
     public void deleteTecnicoById(Long id) {
 
     }
 
-    /*public Tecnico tecnicoMasIncidentesResueltosEspecialidad(String especialidad){
-        return tecnicoRepo.findAll().stream()
-                .max(Comparator.comparingInt(tecnico->
-                        incidenteRepo.findByTecnico_IdAndAliasAndResueltoIsTrue((long) tecnico.getId(),especialidad).size()))
-                .orElse(null);
-    }*/
 }

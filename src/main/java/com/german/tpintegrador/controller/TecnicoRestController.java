@@ -32,19 +32,9 @@ public class TecnicoRestController {
 
     //para probar este endpoint, debo pasar el parametro ndias, para eso en el navegador por ejemplo:
     //http://localhost:8080/masIncidentesResueltosNdias?ndias=800
-    /*@GetMapping("/masIncidentesResueltosNdias")
+    @GetMapping("/masIncidentesResueltosNdias")
     public Tecnico tecnicoMasIncidentesResueltosNdias(@RequestParam String ndias){
-        return tecnicoService.tecnicoMasIncidentesResueltosNdias(Integer.parseInt(ndias));
-    }*/
-    /*@GetMapping("tecnicomasIncidentesResueltosEspecialidad")
-    public Tecnico tecnicomasIncidentesResueltosEspecialidad(@RequestParam String especialidad){
-        return tecnicoService.tecnicoMasIncidentesResueltosEspecialidad(especialidad);
-    }*/
-    @GetMapping("fn")
-    public Tecnico masIncidentesResueltos(){
-        return tecnicoService.tecnicoMasIncidentesResueltos();
+        return tecnicoService.tecnicoMasIncidentesResueltos(Integer.parseInt(ndias));
     }
-
-
 
 }

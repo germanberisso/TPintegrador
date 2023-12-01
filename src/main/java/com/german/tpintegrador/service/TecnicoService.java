@@ -21,7 +21,7 @@ public interface TecnicoService {
     Tecnico fetchTecnicoMasIncidentes();
     Tecnico fetchTecnicoMasIncidentesResueltos();
     int cantIncidentesResueltosTecnico(Tecnico tecnico);
-    Tecnico tecnicoMasIncidentesResueltos();
-    //Tecnico tecnicoMasIncidentesResueltosNdias(int ndias);
-    //Tecnico tecnicoMasIncidentesResueltosEspecialidad(String especialidad);
+    Tecnico tecnicoMasIncidentesResueltos(int ndias);
+    int cantIncidentesResueltosUltimosNdias(Tecnico tecnico, int ndias);
+
 }
